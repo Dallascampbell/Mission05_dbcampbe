@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!--Inport model-->
+@model GradeCalculatorModel;
+
+<form method="post">
+    <label>Input Assignments Percentage</label>
+    <input id="Assignments" asp-for="Assign"/> <br />
+
+    <label>Input Group Project Percentage</label>
+    <input id="Project" asp-for="Pro"/> <br />
+
+    <label>Input Quizzes Percentage</label>
+    <input id="Quizzes" asp-for="Quiz"/> <br />
+
+    <label>Input Midterm Exam Percentage</label>
+    <input id="Midterm" asp-for="Mid"/> <br />
+
+    <label>Input Final Exam Percentage</label>
+    <input id="Final" asp-for="Fin"/> <br />
+
+    <label>Input INTEX Percentage</label>
+    <input id="INTEX" asp-for="IN"/> <br />
+
+    <input id="btnCalc" type="submit" value="Calculate grade" />
+    <br />
+
+    <label>Your Final Letter Grade:</label>
+    <!--Div is here to print grade from last time. Because it blinks and goes away, an alert is also given-->
+    <div id="printGrade"></div>
+    <!--This displays the error messages-->
+    <div asp-validation-summary="All"></div>
+</form>
