@@ -47,5 +47,8 @@ $("#btnCalc").click(function () {
   }
 
   //Print the letter grade back to the HTML file in the form
-  $("#printGrade").html(letterGrade);
+    $("#printGrade").html(letterGrade);
+
+  //Use an alert because the div tag blinks and disappears
+    alert(letterGrade);
 })
